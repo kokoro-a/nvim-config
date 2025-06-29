@@ -72,3 +72,22 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end
   end,
 })
+
+-- Auto-split right window horizontally and open terminal on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    -- Wait a bit for neo-tree to load
+    vim.defer_fn(function()
+      -- Focus on the main editor window (right side)
+      vim.cmd("wincmd l")
+      -- Split horizontally
+      vim.cmd("split")
+      -- Move to the bottom split
+      vim.cmd("wincmd j")
+      -- Open terminal
+      vim.cmd("terminal")
+      -- Move back to the top editor window
+      vim.cmd("wincmd k")
+    end, 100)
+  end,
+})
