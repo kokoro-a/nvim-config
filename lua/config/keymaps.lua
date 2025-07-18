@@ -22,7 +22,6 @@ vim.keymap.set("n", "<leader>cpt", function()
   require("utils.peek").Peek("typeDefinition")
 end, { desc = "Type Definition" })
 
--- Terminal mode escape mappings (consistent with better-escape.nvim)
 vim.keymap.set("t", "jk", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("t", "jj", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("t", "kj", "<C-\\><C-n>", { desc = "Exit terminal mode" })
