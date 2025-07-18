@@ -76,38 +76,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Simple startup layout
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
-    -- Only run if no file arguments (allow directory arguments)
-    if vim.fn.argc() == 0 or (vim.fn.argc() == 1 and vim.fn.isdirectory(vim.fn.argv(0) or "") == 1) then
-      vim.defer_fn(function()
-        -- left: neo-tree
-        -- top-center: editor
-        -- bottom-center: terminal
-        -- right: ClaudeCode
-
-        -- Move to right window (empty buffer, next to NeoTree)
-        vim.cmd("wincmd l")
-        vim.cmd("vsplit")
-        
-        -- Right: make it terminal with claude -c
-        vim.cmd("wincmd l")
-        vim.cmd("enew")
-        vim.cmd("terminal")
-        vim.api.nvim_chan_send(vim.bo.channel, "claude -c\n")
-        vim.cmd("vertical resize 100")
-        
-        -- Center: split top and bottom
-        vim.cmd("wincmd h")
-        vim.cmd("split")
-        
-        -- Center bottom: make it terminal
-        vim.cmd("enew")
-        vim.cmd("terminal")
-        vim.cmd("horizontal resize 20")
-        
-        -- Focus on center top (editor)
-        vim.cmd("wincmd k")
-        vim.cmd("enew")
-      end, 100)
-    end
+    vim.defer_fn(function()
+      vim.cmd("wincmd l")
+      vim.cmd("split")
+      
+      vim.cmd("enew")
+      vim.cmd("terminal")
+      vim.cmd("horizontal resize 20")
+      
+      vim.cmd("wincmd k")
+      vim.cmd("enew")
+    end, 100)
   end,
 })
