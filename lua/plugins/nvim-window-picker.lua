@@ -2,7 +2,7 @@ return {
   "s1n7ax/nvim-window-picker",
   version = "v2.*",
   config = function()
-    local palette = require("nightfox.palette").load(vim.g.colors_name)
+    local palette = require("nightfox.palette").load(vim.g.colors_name or "nightfox")
     require("window-picker").setup({
       hint = "floating-big-letter",
       autoselect_one = true,
@@ -11,14 +11,14 @@ return {
         -- filter using buffer options
         bo = {
           -- if the file type is one of following, the window will be ignored
-          filetype = { "neo-tree", "neo-tree-popup", "notify", "quickfix" },
+          filetype = { "neo-tree-popup", "notify", "quickfix" },
 
           -- if the buffer type is one of following, the window will be ignored
-          buftype = { "terminal" },
+          buftype = {},
         },
       },
-      other_win_hl_color = palette.bg2,
-      current_win_hl_color = palette.bg3,
+      other_win_hl_color = palette.bg2 or "#3b4261",
+      current_win_hl_color = palette.bg3 or "#4b5263",
     })
   end,
   keys = {

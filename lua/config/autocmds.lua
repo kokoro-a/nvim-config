@@ -72,3 +72,20 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end
   end,
 })
+
+-- Simple startup layout
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.defer_fn(function()
+      vim.cmd("wincmd l")
+      vim.cmd("split")
+      
+      vim.cmd("enew")
+      vim.cmd("terminal")
+      vim.cmd("horizontal resize 20")
+      
+      vim.cmd("wincmd k")
+      vim.cmd("enew")
+    end, 100)
+  end,
+})
