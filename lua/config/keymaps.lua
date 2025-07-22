@@ -28,8 +28,8 @@ vim.keymap.set("t", "kj", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 local right_click_events = {'<RightMouse>', '<RightRelease>', '<RightDrag>', '<2-RightMouse>', '<3-RightMouse>', '<4-RightMouse>', '<C-RightMouse>', '<A-RightMouse>'}
 for _, event in pairs(right_click_events) do
-  vim.keymap.set('', event, '<Nop>')
+  vim.keymap.set({'n', 'v', 'i'}, event, '<Nop>')
 end
 
-vim.keymap.set('', '<F4>', '<RightMouse>')
+vim.keymap.set({'n', 'v', 'i'}, '<F4>', '<RightMouse>')
 
