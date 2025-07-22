@@ -89,3 +89,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end, 100)
   end,
 })
+

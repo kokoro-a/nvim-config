@@ -25,3 +25,11 @@ end, { desc = "Type Definition" })
 vim.keymap.set("t", "jk", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("t", "jj", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("t", "kj", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+local right_click_events = {'<RightMouse>', '<RightRelease>', '<RightDrag>', '<2-RightMouse>', '<3-RightMouse>', '<4-RightMouse>', '<C-RightMouse>', '<A-RightMouse>'}
+for _, event in pairs(right_click_events) do
+  vim.keymap.set('', event, '<Nop>')
+end
+
+vim.keymap.set('', '<F4>', '<RightMouse>')
+
