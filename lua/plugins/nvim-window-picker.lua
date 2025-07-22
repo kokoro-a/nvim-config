@@ -32,6 +32,15 @@ return {
       desc = "Pick Window",
     },
     {
+      "<F4>",
+      function()
+        local picked_window_id = require("window-picker").pick_window({ include_current_win = true })
+          or vim.api.nvim_get_current_win()
+        vim.api.nvim_set_current_win(picked_window_id)
+      end,
+      desc = "Pick Window",
+    },
+    {
       "<leader>wx",
       function()
         local window = require("window-picker").pick_window({ include_current_win = false })
