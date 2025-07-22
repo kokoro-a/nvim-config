@@ -31,5 +31,5 @@ for _, event in pairs(right_click_events) do
   vim.keymap.set({'n', 'v', 'i'}, event, '<Nop>')
 end
 
-vim.keymap.set({'n', 'v', 'i'}, '<F4>', '<RightMouse>')
+vim.keymap.set({'n', 'v', 'i'}, 'S-F10', 'popup PopUp', { desc = "Show popup menu" })
 
