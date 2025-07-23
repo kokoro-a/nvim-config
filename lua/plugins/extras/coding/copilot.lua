@@ -23,8 +23,8 @@ return {
         go = true,
         rust = true,
         html = true,
-        -- c = true,
-        -- cpp = true,
+        c = true,
+        cpp = true,
         java = true,
         javascript = true,
         typescript = true,
@@ -41,23 +41,11 @@ return {
       },
     },
     keys = {
-      { "<leader>aca", "<Cmd>Copilot! attach<CR>", desc = "Force Attach" },
-      { "<leader>ace", "<Cmd>Copilot enable<CR>", desc = "Enable" },
-      { "<leader>acd", "<Cmd>Copilot disable<CR>", desc = "Disable" },
-      { "<leader>act", "<Cmd>Copilot suggestion<CR>", desc = "Toggle Suggestions" },
-      { "<leader>acs", "<Cmd>Copilot status<CR>", desc = "Status" },
-    },
-  },
-  {
-    "folke/which-key.nvim",
-    opts = {
-      spec = {
-        {
-          mode = { "n", "v" },
-          { "<leader>a", group = "ai" },
-          { "<leader>ac", group = "copilot settings" },
-        },
-      },
+      { "<leader>apa", "<Cmd>Copilot! attach<CR>", desc = "Force Attach" },
+      { "<leader>ape", "<Cmd>Copilot enable<CR>", desc = "Enable" },
+      { "<leader>apd", "<Cmd>Copilot disable<CR>", desc = "Disable" },
+      { "<leader>apt", "<Cmd>Copilot suggestion<CR>", desc = "Toggle Suggestions" },
+      { "<leader>aps", "<Cmd>Copilot status<CR>", desc = "Status" },
     },
   },
 }
