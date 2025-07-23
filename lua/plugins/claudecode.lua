@@ -20,6 +20,6 @@ return {
     { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
     { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
 
-    { "<a-c>", "<cmd>ClaudeCodeFocus<cr>", mode = {'n', 'v', 'i', 't'}, desc = "Focus Claude" }
+    { "<F2>", "<cmd>ClaudeCodeFocus<cr>", mode = {'n', 'v', 'i', 't'}, desc = "Focus Claude" }
   },
 }
