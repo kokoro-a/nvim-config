@@ -34,3 +34,5 @@ end
 vim.keymap.set({'n', 'v', 'i'}, '<S-F10>', '<cmd>popup PopUp<cr>', { desc = "Show popup menu" })
 vim.keymap.set({'n', 'v', 'i'}, '<F23>', '<cmd>popup PopUp<cr>', { desc = "Show popup menu" })
 
+vim.keymap.set({'n', 'v', 'i', 't'}, '<leader>p', '<cmd>Telescope keymaps<cr>', { desc = "Search keymaps [Telescope]" })
+
