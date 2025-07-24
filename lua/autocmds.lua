@@ -1,3 +1,3 @@
 require "nvchad.autocmds"
 
-vim.cmd("cabbrev pj ProjectMgr")
+vim.cmd("cabbrev pm ProjectMgr")
