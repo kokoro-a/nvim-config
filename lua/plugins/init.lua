@@ -30,4 +30,8 @@ return {
     "charludo/projectmgr.nvim",
     lazy = false,
   },
+  {
+    'github/copilot.vim',
+    lazy = false,
+  },
 }
