@@ -14,11 +14,13 @@ vim.api.nvim_create_autocmd("VimEnter", {
     if vim.fn.argc() == 0 then
       open_tree()
     end
+    vim.cmd("set relativenumber")
   end,
 })
 
 vim.api.nvim_create_autocmd("DirChanged", {
   callback = function()
     open_tree()
+    vim.cmd("set relativenumber")
   end,
 })
