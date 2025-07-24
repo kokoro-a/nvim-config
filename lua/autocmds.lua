@@ -4,7 +4,9 @@ vim.cmd("cabbrev pm ProjectMgr")
 
 local function open_tree()
   require("lazy").load({ plugins = { "nvim-tree.lua" } })
-  vim.cmd("NvimTreeOpen")
+  vim.defer_fn(function()
+    vim.cmd("NvimTreeOpen")
+  end, 100)
 end
 
 vim.api.nvim_create_autocmd("VimEnter", {
