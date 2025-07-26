@@ -12,7 +12,10 @@ return {
     end,
   },
 
-  { import = "nvchad.blink.lazyspec" },
+  {
+    import = "nvchad.blink.lazyspec",
+    opts = require "configs.blink",
+  },
 
   {
   	"nvim-treesitter/nvim-treesitter",
