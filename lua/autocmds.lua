@@ -45,9 +45,6 @@ local function fix_terminal_colors()
   vim.g.terminal_color_13 = "#aa759f"
   vim.g.terminal_color_14 = "#75b5aa"
   vim.g.terminal_color_15 = "#f5f5f5"
-
-  -- vim.api.nvim_set_hl(0, "TerminalNormal", { bg = "#151515", fg = "#d0d0d0" })
-  -- vim.api.nvim_set_hl(0, "Terminal", { bg = "#151515", fg = "#d0d0d0" })
 end
 
 vim.api.nvim_create_autocmd("TermOpen", {
