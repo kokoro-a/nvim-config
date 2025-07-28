@@ -4,7 +4,7 @@
   "auto-session": { "branch": "main", "commit": "ee320d7a59c1dfe83df7c9d58150d9f194690d53" },
   "base46": { "branch": "v3.0", "commit": "cee12a263602cc97652d3dd55f0fc5e171012967" },
   "blink.cmp": { "branch": "main", "commit": "bae4bae0eedd1fa55f34b685862e94a222d5c6f8" },
-  "claudecode.nvim": { "branch": "main", "commit": "91357d810ccf92f6169f3754436901c6ff5237ec" },
+  "claudecode.nvim": { "branch": "main", "commit": "456b68661b0c38ae905206bd08761bd44b7ceb22" },
   "conform.nvim": { "branch": "master", "commit": "973f3cb73887d510321653044791d7937c7ec0fa" },
   "copilot.vim": { "branch": "release", "commit": "12995dffe10282b29b8335650bf3e7457f4870e7" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
