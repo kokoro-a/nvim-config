@@ -1,6 +1,7 @@
 require "nvchad.autocmds"
 
 vim.cmd("cabbrev pm ProjectMgr")
+vim.cmd("cabbrev venv VenvSelect")
 
 local function open_tree()
   require("lazy").load({ plugins = { "nvim-tree.lua" } })
