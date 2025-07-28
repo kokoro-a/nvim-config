@@ -26,6 +26,8 @@ vim.api.nvim_create_autocmd("DirChanged", {
   end,
 })
 
+-- For auto-session
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 -- #############################################################################
 -- base46 has a bug which causes the terminal colors to not be set correctly
 -- this function is a workaround to fix the terminal colors
