@@ -45,10 +45,10 @@ return {
     opts = {
       -- Your settings go here
     },
+  },
 
-    {
-      "djoshea/vim-autoread",
-      lazy = false,
-    },
+  {
+    "djoshea/vim-autoread",
+    lazy = false,
   },
 }
