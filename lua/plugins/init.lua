@@ -61,5 +61,10 @@ return {
     "djoshea/vim-autoread",
     lazy = false,
   },
+
+  {
+    'sindrets/diffview.nvim',
+    lazy = false,
+  },
 }
 
