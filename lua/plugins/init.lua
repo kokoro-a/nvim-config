@@ -18,6 +18,16 @@ return {
   },
 
   {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      filters = {
+        dotfiles = false,
+        git_ignored = false,
+      }
+    },
+  },
+
+  {
   	"nvim-treesitter/nvim-treesitter",
   	opts = {
   		ensure_installed = {
@@ -52,3 +62,4 @@ return {
     lazy = false,
   },
 }
+
